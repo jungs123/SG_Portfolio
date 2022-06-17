@@ -33,7 +33,7 @@
           </span>
         </div>
       </div>
-      <img src="https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_960_720.jpg" alt="no image" style="float:right;height:750px;z-index:1;">
+      <img src="./src/assets/background_img.jpg" alt="no image" style="float:right;height:750px;z-index:1;">
     </div>
 
     <!-- ** AboutMe Page ** -->
@@ -45,7 +45,7 @@
           <span style="font-size:40px;color:black;width:300px;padding-left:30px;"> About Me </span>
         </div>
         <div style="padding-left:100px;padding-top:70px;">
-          <img src="https://i.ibb.co/pwGjmS9/image.jpg" alt="no image" style="width:300px;height:350px;">
+          <img src="./src/assets/ID_photo.jpg" alt="no image" style="width:300px;height:350px;">
         </div>
       </div>
       <div id="section3">
@@ -96,9 +96,9 @@
       </div>
       <div id="textbox5">
         <div style="display:inline-block;">
-          <img src="C:\Users\wjdtm\OneDrive\사진\CNN.png" alt="no image" style="width:450px;height:220px;padding-left:50px;padding-top:40px;">
+          <img src="./src/assets/CNN.png" alt="no image" style="width:450px;height:220px;padding-left:50px;padding-top:40px;">
           <br>
-          <img src="C:\Users\wjdtm\OneDrive\사진\DDD.png" alt="no image" style="width:400px;height:200px;padding-left:70px;padding-top:40px;">
+          <img src="./src/assets/DDD.png" alt="no image" style="width:400px;height:200px;padding-left:70px;padding-top:40px;">
         </div>
         <div style="float:right;width:700px;padding-top:70px;">
           <span class="STitle" style="padding-left:50px;text-align:left;font-size:30px;">우수학부연구생 (2021.12 ~ 2022.03) :<br></span>
@@ -130,10 +130,6 @@ export default {
   name: 'ExampleVue',
   props: {
     msg: String
-  },
-
-  created() {
-
   }
 }
 
@@ -176,6 +172,7 @@ header{ /* Main Menu Bar */
   height:750px;
   background-color:rgb(111, 219, 255);
   border-right:2px solid white;
+  text-align:center;
 }
 #AboutMe{ /* About Me Page */
   width:100%;
