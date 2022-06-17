@@ -33,7 +33,7 @@
           </span>
         </div>
       </div>
-      <img src="./src/assets/background_img.jpg" alt="no image" style="float:right;height:750px;z-index:1;">
+      <img src="../assets/background_img.jpg" alt="no image" style="float:right;height:750px;z-index:1;">
     </div>
 
     <!-- ** AboutMe Page ** -->
@@ -45,13 +45,13 @@
           <span style="font-size:40px;color:black;width:300px;padding-left:30px;"> About Me </span>
         </div>
         <div style="padding-left:100px;padding-top:70px;">
-          <img src="./src/assets/ID_photo.jpg" alt="no image" style="width:300px;height:350px;">
+          <img src="../assets/ID_photo.jpg" alt="no image" style="width:300px;height:350px;">
         </div>
       </div>
       <div id="section3">
         <!-- ** Text Box ** -->
         <div id="textbox2">
-          <br><br>
+          <br><br><br><br>
           <div id="textbox3">
             <span class="STitle" style="padding-left:50px;">Name :<br></span>
             <br>
@@ -74,7 +74,7 @@
             <span class="STitle" style="padding-left:30px;text-align:left;">Education :<br></span>
             <ul>
               <li style="margin-left:40px;font-size:20px;">신성고등학교 졸업</li>
-              <li style="margin-left:40px;font-size:20px;">성균관대학교 전자전기공학부 4학년 1학기 수료</li>
+              <li style="margin-left:40px;font-size:20px;">성균관대학교 전자전기공학부 4학년 1학기<br> 수료</li>
             </ul>
             <br><br>
             <span class="STitle" style="padding-left:30px;text-align:left;">Strength :<br></span>
@@ -96,9 +96,9 @@
       </div>
       <div id="textbox5">
         <div style="display:inline-block;">
-          <img src="./src/assets/CNN.png" alt="no image" style="width:450px;height:220px;padding-left:50px;padding-top:40px;">
+          <img src="../assets/CNN.png" alt="no image" style="width:450px;height:220px;padding-left:50px;padding-top:40px;">
           <br>
-          <img src="./src/assets/DDD.png" alt="no image" style="width:400px;height:200px;padding-left:70px;padding-top:40px;">
+          <img src="../assets/DDD.png" alt="no image" style="width:400px;height:200px;padding-left:70px;padding-top:40px;">
         </div>
         <div style="float:right;width:700px;padding-top:70px;">
           <span class="STitle" style="padding-left:50px;text-align:left;font-size:30px;">우수학부연구생 (2021.12 ~ 2022.03) :<br></span>
@@ -108,7 +108,7 @@
             <li style="margin-left:60px;font-size:20px;">Systolic Array를 이용한 Convolution을 통해 속도 향상</li>
           </ul>
 
-          <br><br><br><br>
+          <br><br><br><br><br><br>
           <span class="STitle" style="padding-left:50px;text-align:left;font-size:30px;">종합 설계 프로젝트 (2022.03 ~ 2022.06):<br></span>
           <ul>
             <li style="margin-left:60px;font-size:20px;">졸음 운전 판별 인공지능 구현</li>
@@ -122,19 +122,14 @@
   </div>
 </template>
 
+
 <script>
-
-
-
 export default {
   name: 'ExampleVue',
   props: {
     msg: String
   }
 }
-
-
-
 </script>
 
 <style scoped>
@@ -172,12 +167,13 @@ header{ /* Main Menu Bar */
   height:750px;
   background-color:rgb(111, 219, 255);
   border-right:2px solid white;
-  text-align:center;
+  text-align:left;
 }
 #AboutMe{ /* About Me Page */
   width:100%;
   height:750px;
   clear:left;
+  text-align:left;
 }
 #section2{ /* Section in About Me Page */
   width:33%;
@@ -199,6 +195,7 @@ header{ /* Main Menu Bar */
   background-color:beige;
   border-radius:30px;
   border:2px solid black;
+  text-align:left;
 }
 #textbox3{
   display:inline-block;
@@ -213,6 +210,7 @@ header{ /* Main Menu Bar */
   width:100%;
   height:750px;
   margin-top:50px;
+  text-align:left;
 }
 #textbox5{
   margin-top:50px;
@@ -221,6 +219,7 @@ header{ /* Main Menu Bar */
   height:550px;
   border:4px solid black;
   border-radius:30px;
+  text-align:left;
 }
 
 /* Class Definition */
