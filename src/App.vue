@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ExampleVue from "@/components/example";
+import ExampleVue from "@/components/Portfolio";
 export default {
   components: {ExampleVue}
 }
