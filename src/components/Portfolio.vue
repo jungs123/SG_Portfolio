@@ -2,7 +2,7 @@
 
   <header>
     <!-- ** Main Menu bar ** -->
-    <h1 style="margin-left:50px">SG's Portfolio</h1>
+    <h1 style="margin-left:50px"><a href="http://localhost:8080/#main">SG's Portfolio</a></h1>
     <ul id="menu">
       <li style="margin-right:40px"><a href="#main" class="scroll_move">Main</a></li>
       <li style="margin-right:40px"><a href="#AboutMe" class="scroll_move">About Me</a></li>
@@ -124,12 +124,82 @@
 
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'ExampleVue',
   props: {
     msg: String
-  }
+  },
+
+  data () {
+    return {
+      info: null,
+      name: null,
+      birth: null,
+      email: null,
+      phone: null
+    }
+  },
+
+  methods: {
+    delete(id) {
+      axios
+          .delete("http://localhost:8080/" + id)
+          .then(response => {
+            const { data } = response
+            console.log(data)
+          })
+          .catch(error => {
+            alert(error)
+          })
+    },
+    create(id, params) {
+      axios
+          .post("http://localhost:8080/", params)
+          .then(response => {
+            const { data } = response
+            console.log(data)
+          })
+          .catch(error => {
+            alert(error)
+          })
+    },
+    update(id, params) {
+      axios
+          .put("http://localhost:8080/" + id, {
+            params: params,
+          })
+          .then(response => {
+            const { data } = response
+            console.log(data)
+          })
+          .catch(error => {
+            alert(error)
+          })
+    },
+    read() {
+      axios
+          .get("http://localhost:8080/User")
+          .then(response => {
+            const { data } = response
+            console.log(data)
+            this.name = data.name
+            this.birth = data.birth
+            this.phone = data.phone
+            this.email = data.email
+          })
+          .catch(error => {
+            alert(error)
+          })
+    },
+  },
+
+  /*mounted () {
+    this.read()
+  }*/
 }
+
 </script>
 
 <style scoped>
@@ -238,6 +308,9 @@ header{ /* Main Menu Bar */
 .SAnswer{
   font-size:25px;
   font-weight:400;
+}
+.scroll_move:hover{
+  color:rgb(255, 192, 0)
 }
 a{
   color:white;
